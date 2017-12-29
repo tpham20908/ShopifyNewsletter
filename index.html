@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <!--
+    Shopify's Newsletter
+    Author: Thanh-Tung Pham
+    Date: Jan 3rd, 2018
+   -->
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Sign up</title>
+  <link rel="stylesheet" href="styles/style.css" />
+  <script src="scripts/modernizr.custom.65897.js"></script>
+</head>
+<body>
+  <header>
+    <h1>
+      Stay up to date with ecommerce trends with Shopify's Newsletter
+    </h1>
+    <hr>
+  </header>
+
+  <article>
+    <h2>Subscribe for free marketing tips</h2>
+    <form action="#" novalidate="novalidate">
+      <fieldset id="userinfo">
+        <label for="email">Email</label>
+        <input id="email" type="text" name="email" required="required" placeholder="Email Address">
+        <select name="interest">
+          <option value="" disabled selected>Interested in</option>
+          <option value="shopping">Shopping</option>
+          <option value="education">Education</option>
+          <option value="health">Health</option>
+          <option value="sport">Sport</option>
+          <option value="vacation">Vacation</option>
+        </select>
+      </fieldset>
+
+      <div id="errorText"></div>
+
+      <fieldset id="submitsection">
+        <input type="submit" id="submitBtn">
+      </fieldset>
+    </form>
+
+    <div id="unsubscribe">
+      <a href="">Unsubscribe</a>
+    </div>
+  </article>
+
+</body>
+</html>
