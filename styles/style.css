@@ -38,7 +38,8 @@ footer, header, hgroup, menu, nav, section {
 body {
   font-family: Helvetica, sans-serif;
   background-color: #000639;
-  color: #ffffff; }
+  color: #ffffff;
+  font-size: 16px; }
 
 header, article {
   max-width: 720px;
@@ -66,14 +67,42 @@ article {
   article #userinfo label[for="email"] {
     display: none; }
   article #userinfo input, article #userinfo select {
-    width: 360px;
+    font-size: 16px;
+    width: 400px;
     height: 48px;
-    font-size: 18px;
     color: #7b7b7b;
     padding-left: 8px;
     margin-right: 20px;
     border: none;
     border-radius: 5px; }
+  article #userinfo input:focus {
+    background: #ffffaa; }
   article #userinfo select {
-    width: 320px;
+    position: absolute;
+    width: 300px;
     margin: 0; }
+  article #errorText {
+    height: 48px; }
+  article #submitBtn {
+    font-size: 16px;
+    width: 100%;
+    height: 48px;
+    color: #fff;
+    text-align: center;
+    background: #5c6ac4;
+    border: none;
+    border-radius: 5px;
+    padding: 12px auto;
+    cursor: pointer; }
+  article #submitBtn:hover {
+    border: 1.5px solid #7c8ae4; }
+  article #unsubscribe {
+    width: 720px;
+    position: absolute;
+    bottom: 0;
+    text-align: center; }
+    article #unsubscribe a {
+      font-size: 16px;
+      color: #fff;
+      display: block;
+      padding-bottom: 1em; }
