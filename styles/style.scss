@@ -1,0 +1,96 @@
+/*
+  Filename: styles.scss for Shopify's Newsletter web page
+*/
+
+/* apply a natural box layout model to all elements */
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+/* reset rules */
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+/* general style */
+body {
+  font-family: Helvetica, sans-serif;
+  background-color: #000639;
+  color: #ffffff;
+}
+
+header, article {
+  max-width: 720px;
+  margin: 2em auto;
+}
+
+/* header */
+header {
+  h1 {
+    margin: 2em 0 0.5em 0;
+    font-weight: bold;
+    font-size: 36px;
+    letter-spacing: 1px;
+  }
+  hr {
+    margin: 0;
+    width: 32px;
+    height: 4px;
+    background-color: #7ab55c;
+    border: none;
+  }
+}
+
+/* article */
+article {
+  padding-top: 1.5em;
+  h2 {
+    font-size: 24px;
+    margin-bottom: 1em;
+  }
+  #userinfo {
+    label[for="email"] {
+      display: none;
+    }
+    input, select {
+      width: 360px;
+      height: 48px;
+      font-size: 18px;
+      color: #7b7b7b;
+      padding-left: 8px;
+      margin-right: 20px;
+      border: none;
+      border-radius: 5px;
+    }
+    select {
+      width: 320px;
+      margin: 0;
+    }
+  }
+}
