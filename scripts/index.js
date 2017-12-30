@@ -1,21 +1,30 @@
 /* Filename: index.js for Shopify's Newsletter webpage */
+
 "use strict";
 
 /* global variable */
 var formValidity = true;
+var newAccount = {};
+var newAccountStr;
 
 /* validate email address field */
 function validateEmail() {
-  var inputEmail = document.getElementById('email');
+  var email = document.getElementById("email");
   var errorDiv = document.getElementById('errorText');
   var requiredValidity = true;
   try {
-    if (!/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(inputEmail.value)) {
-      // inputEmail.style.color = "#c23628";
+    if (!/^([a-zA-Z0-9_\-\.]+)@([a-zA-Z0-9_\-\.]+)\.([a-zA-Z]{2,5})$/.test(email.value)) {
+      // email.style.color = "#c23628";
       requiredValidity = false;
     }
     if (requiredValidity === false) {
+      errorDiv.style.color = "#c23628";
       throw "Please enter a valid email address";
+    }
+    else {
+      console.log(newAccountStr);
+      errorDiv.style.color = "#7ab55c";
+      throw "Signed up successfully";
     }
   }
   catch(msg) {
@@ -39,14 +48,34 @@ function validateForm(event) {
   }
 }
 
+/* create new account */
+function createAccount() {
+  var email = document.getElementById("email");
+  var interest = document.getElementById("interest");
+  newAccount["email"] = email.value;
+  newAccount["interest"] = interest.value;
+  newAccountStr = JSON.stringify(newAccount);
+}
+
 /* create event listenvers */
 function createEventListeners() {
-  var form = document.getElementsByTagName("form")[0];
-  if (form.addEventListener) {
-    form.addEventListener("submit", validateForm, false);
+  var email = document.getElementById("email");
+  var interest = document.getElementById("interest");
+  if (email.addEventListener) {
+    email.addEventListener("change", createAccount, false);
+    interest.addEventListener("change", createAccount, false);
   }
-  else if (form.attachEvent) {
-    form.attachEvent("onsubmit", validateForm);
+  else if (email.attachEvent) {
+    email.attachEvent("onchange", createAccount);
+    interest.attachEvent("onchange", createAccount);
+  }
+
+  var button = document.getElementById('submitBtn');
+  if (button.addEventListener) {
+    button.addEventListener("click", validateForm, false);
+  }
+  else if (button.attachEvent) {
+    button.attachEvent("onclick", validateForm);
   }
 }
 
