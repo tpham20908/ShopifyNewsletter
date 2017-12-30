@@ -134,3 +134,45 @@ article {
     }
   }
 }
+
+@media screen and (min-width: 500px) and (max-width: 768px) {
+  header, article {
+    width: 480px;
+    h1 {
+      font-size: 28px;
+    }
+  }
+  article {
+    #userinfo {
+      input, select, #errorText {
+        position: relative;
+        margin: 8px 0;
+        width: 100%;
+      }
+    }
+    #unsubscribe {
+      width: 480px;
+    }
+  }
+}
+
+@media screen and (max-width: 499px) {
+  header, article {
+    width: 320px;
+    h1 {
+      font-size: 24px;
+    }
+  }
+  article {
+    #userinfo {
+      input, select, #errorText {
+        position: relative;
+        margin: 8px 0;
+        width: 100%;
+      }
+    }
+    #unsubscribe {
+      width: 320px;
+    }
+  }
+}

@@ -22,7 +22,9 @@ function validateEmail() {
       throw "Please enter a valid email address";
     }
     else {
-      console.log(newAccountStr);
+      console.log("New Account Created:" +
+                  "\nEmail: " + newAccount.email +
+                  "\nInterested in: " + newAccount.interest);
       errorDiv.style.color = "#7ab55c";
       throw "Signed up successfully";
     }
